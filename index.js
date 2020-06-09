@@ -1,7 +1,7 @@
 // mixcloud-get-data
 // Does API calls to Mixcloud to get data to display on your stream.
 
-const { USERNAME, FILE_DIR, FOLLOWER_FILE, API_URL } = require("./config");
+const { USERNAME, FILE_DIR, FOLLOWER_FILE, API_URL, UPDATE_TIME } = require("./config");
 const axios = require('axios');
 var fs = require('fs');
 
