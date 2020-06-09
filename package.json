@@ -16,5 +16,10 @@
   "bugs": {
     "url": "https://github.com/LKHetzel/mixcloud-live-data/issues"
   },
-  "homepage": "https://github.com/LKHetzel/mixcloud-live-data#readme"
+  "homepage": "https://github.com/LKHetzel/mixcloud-live-data#readme",
+  "dependencies": {
+    "axios": "^0.19.2",
+    "dotenv": "^8.2.0",
+    "fs": "0.0.1-security"
+  }
 }
