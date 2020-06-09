@@ -2,15 +2,20 @@
 
 Pulls data from Mixcloud API for displaying followers, etc on Mixcloud Live Streams
 
-  
+# Requirements
+- NodeJS
+
+For npm dependencies, please view package-lock.json.
 
 # How to Use:
 
 1. Clone or download & extract zip archive.
 
-2. Copy the .env.template file to .env
+2. Run `npm install`
 
-3. Fill in the data in .env:
+3. Copy the .env.template file to .env
+
+4. Fill in the data in .env:
 
     a. USERNAME = Your Mixcloud username
 
@@ -22,9 +27,9 @@ Pulls data from Mixcloud API for displaying followers, etc on Mixcloud Live Stre
 
     e. UPDATE_TIME = Amount of time in seconds to query the API and update the data. 60 is provided as default, and recommended as to not get rate limited by Mixcloud API.
 
-4. Navigate to the folder and run the app with `node index.js`
+5. Navigate to the folder and run the app with `node index.js`
 
-5. Add all of the files as data in your OBS Scenes/StreamLabels/whatever.
+6. Add all of the files as data in your OBS Scenes/StreamLabels/whatever.
 
   
 
