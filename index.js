@@ -9,6 +9,20 @@ time = UPDATE_TIME * 1000
 console.log('Running Mixcloud Data Query Server - CTRL-C to exit.');
 console.log("Updating every " + UPDATE_TIME + " seconds");
 
+function checkDir() {
+  try {
+    if (fs.existsSync(FILE_DIR)) {
+      console.log("Directory exists, continuing...");
+    } else {
+      console.log(`Directory does not exist. If network path, ensure mounted at ${FILE_DIR} and try again.`);
+      process.exit(1);
+    }
+  } catch(e) {
+    console.log("An unknown error occured");
+    process.exit(1);
+  }
+}
+
 function getRecentFollower() {
 axios.get(`${API_URL}${USERNAME}/followers/?limit=1`)
   .then(response => {
@@ -30,5 +44,6 @@ getRecentFollower();
 }
 
 // Main Loop
+checkDir(); //Check for directory existence.
 runAll(); //Initial Refresh on server start for most recent data.
 setInterval(runAll, time);
